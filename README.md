@@ -11,6 +11,16 @@ I hope it's not a copyright infringement. If it is, please contact me in order t
 
 __Item 1 : Static factory methods__
 
+Quote 1
+> The ability of static factory methods to return the same object from repeated invocations allows classes to maintain strict control over what instances exist at any time.
+
+- `java.lang` Boolean class is a good example. The objects created via `valueOf` methods are referencially equal.
+
+Quote 2
+> By convention, static factory methods for an interface named Type were put in a noninstantiable companion class (Item 4) named Types
+
+- The point is just the plural 's' on "Type[s]". Reference: https://stackoverflow.com/questions/6129026/effective-java-by-joshua-bloch-item1-static-factory-method
+
 Pros
  - They have a name
  - You can use them to control the number of instance (Example : Boolean.valueOf)
