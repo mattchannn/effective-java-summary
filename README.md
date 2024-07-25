@@ -6,6 +6,11 @@ This is a summary of the book "Effective Java 3rd Edition" by Joshua Bloch (http
 The book is awesome and has a lot of interesting views in it. This document is only my take on what I want to really keep in mind when working with Java.
 I hope it's not a copyright infringement. If it is, please contact me in order to remove this file from github.
 
+## Progress
+
+- [Item 1] Static factory methods (90%)
+- [Item 2] Builder (100%)
+
 ## Creating and destroying objects
 
 **Item 1 : Static factory methods**
