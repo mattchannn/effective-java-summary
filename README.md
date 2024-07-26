@@ -187,6 +187,8 @@ static void copy(String src, String dst) throws IOException {
 
 ## Methods of the Object class
 
+**Item 10 : equals**
+
 Quote 1
 
 > If you were to violate it and then add an instance of your class to a collection, the contains method might well say that the collection didn’t contain the instance that you just added.
@@ -200,8 +202,6 @@ Quote 2
 So when you can't guarantee the `Objects.equals` overriden by String you can't guarantee `String` will be always equivalent to `CaseInsensitiveString.class`.
 Violating below
 > x.equals(y) must return true if and only if y.equals(x) returns true
-
-**Item 10 : equals**
 
 The equals method needs to be overriden when the class has a notion of logical equality.
 This is generally the case for value classes.
