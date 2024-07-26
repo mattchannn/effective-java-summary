@@ -11,6 +11,7 @@ I hope it's not a copyright infringement. If it is, please contact me in order t
 - [Item 1] Static factory methods (90%)
   - Remains the fifth advantage
 - [Item 2] Builder (100%)
+- [Item 10] Obey general contract when override `equals` (30%)
 
 ## Creating and destroying objects
 
@@ -185,6 +186,12 @@ static void copy(String src, String dst) throws IOException {
 ```
 
 ## Methods of the Object class
+
+Quote 1
+
+> If you were to violate it and then add an instance of your class to a collection, the contains method might well say that the collection didn’t contain the instance that you just added.
+
+Check the [Github example](https://github.com/mattchannn/effective-java-3e-source-code/blob/master/src/effectivejava/chapter3/item10/CClass.java)
 
 **Item 10 : equals**
 
