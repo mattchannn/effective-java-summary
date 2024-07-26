@@ -34,7 +34,15 @@ Quote 3
 
 > For example, it is impossible to subclass any of the convenience implementation classes in the Collections Framework
 
-- You cannot extend `UnmodifiableList` because it has a package-private access modifier.z You can't subclass a class without a public or protected constructor.
+- You cannot extend `UnmodifiableList` because it has a package-private access modifier. You can't subclass a class without a public or protected constructor.
+
+Quote 4
+
+> Note, however, that it may still be necessary to put the bulk of the implementation code behind these static methods in a separate package-private class
+
+In below example, it shows that the class `Audi` and `BMW` (aka implementation code) must be put behind the static methods defined in the interface `Vehicle` in a separate package-private class. Otherwise the interface will lose visibility to the implementation code.
+
+[Github Example](https://github.com/mattchannn/effective-java-3e-source-code/tree/master/src/effectivejava/chapter2/item1/nocompanion)
 
 Pros
 
