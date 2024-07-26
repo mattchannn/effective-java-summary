@@ -193,6 +193,14 @@ Quote 1
 
 Check the [Github example](https://github.com/mattchannn/effective-java-3e-source-code/blob/master/src/effectivejava/chapter3/item10/CClass.java)
 
+Quote 2
+
+> The problem is that while the equals method in CaseInsensitiveString knows about ordinary strings, the equals method in String is oblivious to case-insensitive strings.
+
+So when you can't guarantee the `Objects.equals` overriden by String you can't guarantee `String` will be always equivalent to `CaseInsensitiveString.class`.
+Violating below
+> x.equals(y) must return true if and only if y.equals(x) returns true
+
 **Item 10 : equals**
 
 The equals method needs to be overriden when the class has a notion of logical equality.
