@@ -9,6 +9,7 @@ I hope it's not a copyright infringement. If it is, please contact me in order t
 ## Progress
 
 - [Item 1] Static factory methods (90%)
+  - Remains the fifth advantage
 - [Item 2] Builder (100%)
 
 ## Creating and destroying objects
@@ -43,6 +44,12 @@ Quote 4
 In below example, it shows that the class `Audi` and `BMW` (aka implementation code) must be put behind the static methods defined in the interface `Vehicle` in a separate package-private class. Otherwise the interface will lose visibility to the implementation code.
 
 [Github Example](https://github.com/mattchannn/effective-java-3e-source-code/tree/master/src/effectivejava/chapter2/item1/nocompanion)
+
+Quote 5
+
+> In the OpenJDK implementation, they return an instance of one of two subclasses, depending on the size of the underlying enum type: if it has sixty-four or fewer elements, as most enum types do, the static factories return a RegularEnumSet instance, which is backed by a single long; if the enum type has sixty-five or more elements, the factories return a JumboEnumSet instance, backed by a long array.
+
+From the `noneOf` method in `EnumSet` class in `java.util` package, we can see that consumers are not aware of the actual implementation class but they only know what a `EnumSet` is.
 
 Pros
 
