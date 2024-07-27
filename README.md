@@ -11,7 +11,8 @@ I hope it's not a copyright infringement. If it is, please contact me in order t
 - [Item 1] Static factory methods (90%)
   - Remains the fifth advantage
 - [Item 2] Builder (100%)
-- [Item 10] Obey general contract when override `equals` (30%)
+- [Item 10] Obey general contract when override `equals` (100%)
+- [Item 11] Always override hashCode (10%)
 
 ## Creating and destroying objects
 
@@ -228,6 +229,26 @@ Quote 5
             return false;
         Point p = (Point) o;
         return p.x == x && p.y == y;
+    }
+```
+
+Quote 6
+
+> Use an interface if the class implements an interface that refines the equals contract to permit comparisons across classes that implement the interface
+
+For example, in `ArrayList.java` in `java.util` package. The correct type from instanceof is not the implementation code but an interface.
+
+```java
+public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+
+        if (!(o instanceof List)) {
+            return false;
+        }
+
+        // .... continue
     }
 ```
 
