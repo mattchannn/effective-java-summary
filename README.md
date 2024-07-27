@@ -211,6 +211,26 @@ Quote 3
 
 See this [Github example](https://github.com/mattchannn/effective-java-3e-source-code/tree/master/src/effectivejava/chapter3/item10/stackoverflow) for more detail.
 
+Quote 4
+
+> While this does not violate the equals contract, it is clearly unacceptable
+
+Because we would like to compare the `ColorPoint` and regular `Point` class with the value component (i.e.: `Color`) too.
+
+Quote 5
+
+> If, however, you use a proper instanceof-based equals method on Point, the same onUnitCircle method works fine
+
+```java
+@Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Point))
+            return false;
+        Point p = (Point) o;
+        return p.x == x && p.y == y;
+    }
+```
+
 ---
 
 The equals method needs to be overriden when the class has a notion of logical equality.
