@@ -12,7 +12,7 @@ I hope it's not a copyright infringement. If it is, please contact me in order t
   - Remains the fifth advantage
 - [Item 2] Builder (100%)
 - [Item 10] Obey general contract when override `equals` (100%)
-- [Item 11] Always override hashCode (10%)
+- [Item 11] Always override hashCode (100%)
 
 ## Creating and destroying objects
 
