@@ -269,6 +269,12 @@ Not respecting those rules will have impact on the use of List, Set or Map.
 
 **Item 11 : hashCode**
 
+Quote 1
+
+> If a class is immutable and the cost of computing the hash code is significant, you might consider caching the hash code in the object rather than recalculating it each time it is requested
+
+Please check the [explaination from Stackoverflow](https://stackoverflow.com/questions/53306221/lazy-initialization-of-hashcode-in-java)
+
 The hashCode method needs to be overriden if the equals method is overriden.
 
 Here is the contract of the hashCode method :
